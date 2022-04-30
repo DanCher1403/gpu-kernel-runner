@@ -1196,6 +1196,8 @@ int main(int argc, char** argv)
     build_kernel(context);
     maybe_write_intermediate_representation(context);
 
+    if (context.options.compile_only) { return EXIT_SUCCESS; }
+
     // Note: There's an implicit assumption in this program that no buffers are in-out;
     // This is not terrible, since we can always copy the in-out buffer on the _device_
     // as though it was an output buffer, to the host. However - this makes it trickier
