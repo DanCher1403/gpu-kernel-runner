@@ -4,6 +4,7 @@
 #define __CL_ENABLE_EXCEPTIONS
 DISABLE_WARNING_PUSH
 DISABLE_WARNING(-Wignored-attributes)
+DISABLE_WARNING(-Wsign-conversion)
 #include <khronos/cl2.hpp>
 DISABLE_WARNING_POP
 
