@@ -28,7 +28,7 @@ union launch_configuration_type {
     launch_configuration_type()  { }
 //    launch_configuration_type() { std::memset(this, 0, sizeof(*this)); }
 DISABLE_WARNING_PUSH
-DISABLE_WARNING(-Wclass-memaccess)
+DISABLE_WARNING_CLASS_MEMACCESS
     launch_configuration_type(const launch_configuration_type& other) { std::memcpy(this, &other, sizeof(other)); }
 DISABLE_WARNING_POP
 
