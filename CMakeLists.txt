@@ -25,7 +25,7 @@ include(CompileWithWarnings)
 find_package(CUDAToolkit 10.1 REQUIRED)
 find_package(spdlog 1.6.0 REQUIRED)
 #find_package(cuda-api-wrappers 0.3.3 REQUIRED)
-find_package(cuda-api-wrappers 0.5 REQUIRED)
+find_package(cuda-api-wrappers 0.5.2 REQUIRED)
 
 ###############
 ##  OPTIONS  ##
@@ -47,14 +47,13 @@ add_executable(kernel-runner
 	src/nvrtc-related/miscellany.hpp
 	src/nvrtc-related/execution.hpp
 	src/nvrtc-related/build.hpp
-	src/nvrtc-related/ugly_error_handling.hpp
 	src/nvrtc-related/standard_header_substitutes.hpp
 	src/opencl-related/build.hpp
   	src/opencl-related/execution.hpp
   	src/opencl-related/miscellany.hpp
   	src/opencl-related/types.hpp
   	src/opencl-related/ugly_error_handling.hpp
-        src/util/cxxopts-extra.hpp
+    src/util/cxxopts-extra.hpp
 	src/util/factory_producible.hpp
 	src/util/filesystem.hpp
 	src/util/functional.hpp
